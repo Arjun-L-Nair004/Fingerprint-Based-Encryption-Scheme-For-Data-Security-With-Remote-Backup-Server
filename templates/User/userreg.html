@@ -1,0 +1,229 @@
+{#<!doctype html>#}
+{#<html lang="en">#}
+{#  <head>#}
+{#  	<title>Register</title>#}
+{#    <meta charset="utf-8">#}
+{#    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">#}
+{##}
+{#	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">#}
+{##}
+{#	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">#}
+{#	#}
+{#	<link rel="stylesheet" href="/static/login/css/style.css">#}
+{##}
+{##}
+{#	</head>#}
+{#	<body>#}
+{#    <form action="/FST/udetails_post/" method="post" enctype="multipart/form-data" name="form1" id="form1">#}
+{#    {% csrf_token %}#}
+{#	<section class="ftco-section">#}
+{#		<div class="container">#}
+{#			<div class="row justify-content-center">#}
+{#				<div class="col-md-6 text-center mb-5">#}
+{#					<h2 class="heading-section">Register Here</h2>#}
+{#				</div>#}
+{#			</div>#}
+{#			<div class="row justify-content-center">#}
+{#				<div class="col-md-6 col-lg-4">#}
+{#					<div class="login-wrap p-0">#}
+{#		      	<form action="#" class="signin-form">#}
+{#		      		<div class="form-group">#}
+{#		      			<input type="text" class="form-control" placeholder="Name" required name="textfield" id="textfield">#}
+{#		      		</div>#}
+{#                    <div class="form-group">#}
+{#		      			<input type="text" class="form-control" placeholder="Place" required>#}
+{#		      		</div>#}
+{#                    <div class="form-group">#}
+{#		      			<input type="text" class="form-control" placeholder="District" required>#}
+{#		      		</div>#}
+{#                    <div class="form-group">#}
+{#		      			<input type="text" class="form-control" placeholder="State" required>#}
+{#		      		</div>#}
+{#                    <div class="form-group">#}
+{#		      			<input type="text" class="form-control" placeholder="Pin" required>#}
+{#		      		</div>#}
+{#                    <div class="form-group">#}
+{#		      			<input type="text" class="form-control" placeholder="Gender" required>#}
+{#		      		</div>#}
+{#                    <div class="form-group">#}
+{#		      			<input type="text" class="form-control" placeholder="Email" required>#}
+{#		      		</div>#}
+{#                    <div class="form-group">#}
+{#		      			<input type="text" class="form-control" placeholder="Phone no" required>#}
+{#		      		</div>#}
+{#                    <div class="form-group">#}
+{#		      			<input type="text" class="form-control" placeholder="D.O.B" required>#}
+{#		      		</div>#}
+{#                    <div class="form-group">#}
+{#		      			<input type="file" class="form-control" placeholder="Photo" required>#}
+{#		      		</div>#}
+{##}
+{##}
+{##}
+{#	            <div class="form-group">#}
+{#	              <input id="password-field" type="password" class="form-control" placeholder="Password" required>#}
+{#	              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>#}
+{#	            </div>#}
+{#                <div class="form-group">#}
+{#	              <input id="password-field" type="password" class="form-control" placeholder="Confirm Password" required>#}
+{#	              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>#}
+{#	            </div>#}
+{#	            <div class="form-group">#}
+{#	            	<button type="submit" class="form-control btn btn-primary submit px-3">Sign In</button>#}
+{#	            </div>#}
+{#	            <div class="form-group d-md-flex">#}
+{#	            <div class="w-50">#}
+{#		            	<label class="checkbox-wrap checkbox-primary">Remember Me#}
+{#									  <input type="checkbox" checked>#}
+{#									  <span class="checkmark"></span>#}
+{#									</label>#}
+{#								</div>#}
+{#								<div class="w-50 text-md-right">#}
+{#									<a href="#" style="color: #fff">Forgot Password</a>#}
+{#								</div>	#}
+{#	            </div>#}
+{#	          </form>#}
+{#				</div>#}
+{#			</div>#}
+{#		</div>#}
+{#	</section>#}
+{##}
+{#	<script src="/static/login/js/jquery.min.js"></script>#}
+{#  <script src="/static/login/js/popper.js"></script>#}
+{#  <script src="/static/login/js/bootstrap.min.js"></script>#}
+{#  <script src="/static/login/js/main.js"></script>#}
+{#    </form>#}
+{#	</body>#}
+{#</html>#}
+{##}
+
+
+
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+  <head>
+  	<title>Login</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="/static/login/css/style.css">
+
+   <style>
+  body {
+    background-image: url(/static/login/images/bg.jpeg);
+    background-size: cover;  /* Ensures the background image covers the whole screen */
+    background-position: center center;  /* Keeps the image centered */
+    background-attachment: fixed;  /* Keeps the background fixed while scrolling */
+    height: 500vh;  /* Makes sure the body takes full height of the screen */
+    margin: 0;  /* Removes default margin to avoid scrolling */
+  }
+
+  /* Custom button style */
+  .new {
+    background-color: #0f6674;  /* Sets the background color */
+    color: white;  /* Sets the text color */
+    border: none;  /* Removes the border */
+    padding: 15px 30px;  /* Adjusts the padding */
+    font-size: 16px;  /* Adjusts the font size */
+    font-weight: bold;  /* Makes the text bold */
+    border-radius: 5px;  /* Gives the button rounded corners */
+    transition: background-color 0.3s ease;  /* Smooth transition for hover effect */
+  }
+
+  /* Hover effect */
+  .new:hover {
+    background-color: #084848;  /* Darker shade for hover effect */
+  }
+</style>
+
+
+	</head>
+	<body>
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">Register</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-6 col-lg-4">
+					<div class="login-wrap p-0">
+		      	<h3 class="mb-4 text-center"></h3>
+		      	<form action="/FST/udetails_post/" method="post" class="signin-form" enctype="multipart/form-data">
+                    {% csrf_token %}
+		      		<div class="form-group">
+		      			<input type="text" class="form-control" placeholder="Name" required name="textfield" >
+		      		</div>
+                    <div class="form-group">
+		      			<input type="text" class="form-control" placeholder="Place" required name="textfield2" >
+		      		</div>
+                    <div class="form-group">
+		      			<input type="text" class="form-control" placeholder="District" required name="textfield3">
+		      		</div>
+                    <div class="form-group">
+		      			<input type="text" class="form-control" placeholder="State" required name="textfield4">
+		      		</div>
+                    <div class="form-group">
+		      			<input type="text" class="form-control" placeholder="Pin" required name="textfield5">
+		      		</div>
+                    <div class="form-group">
+
+		      			<input type="radio"  placeholder="Gender"  name="radio" value="Male" required> Male &nbsp;&nbsp;&nbsp;&nbsp;
+
+		      			<input type="radio"  placeholder="Gender"  name="radio" value="Female" required>Female
+		      		</div>
+                    <div class="form-group">
+		      			<input type="text" class="form-control" placeholder="Email" required name="textfield6">
+		      		</div>
+                    <div class="form-group">
+		      			<input type="text" class="form-control" placeholder="Phone no" required name="textfield7">
+		      		</div>
+
+
+                     <div class="form-group">
+    <label for="dob">D.O.B</label>
+    <input type="date" class="form-control" placeholder="D.O.B" required name="textfield8" id="dob">
+</div>
+
+<div class="form-group">
+    <label for="photo">Photo</label>
+    <input type="file" class="form-control" name="fileField" placeholder="Photo" required  >
+</div>
+
+
+
+	            <div class="form-group">
+	              <input id="password-field" type="password" class="form-control" placeholder="Password" required name="textfield9">
+	              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+	            </div>
+                <div class="form-group">
+	              <input id="password-field" type="password" class="form-control" placeholder="Confirm Password" required name="textfield10">
+	              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+	            </div>
+
+	           <div class="form-group">
+	            	<button type="submit" class="form-control submit px-3 new">Sign Up</button>
+	            </div>
+
+
+	          </form>
+
+		      </div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="/static/login/js/jquery.min.js"></script>
+  <script src="/static/login/js/popper.js"></script>
+  <script src="/static/login/js/bootstrap.min.js"></script>
+  <script src="/static/login/js/main.js"></script>
+
+	</body>
+</html>
+

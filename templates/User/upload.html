@@ -1,0 +1,32 @@
+{#<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">#}
+{#<html xmlns="http://www.w3.org/1999/xhtml">#}
+{#<head>#}
+{#<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />#}
+{#<title>Untitled Document</title>#}
+{#</head>#}
+{% extends 'User/userindex.html' %}
+{% block body %}
+<body>
+<form action="/FST/upload_post/" method="post" enctype="multipart/form-data" name="form1" id="form1">
+    {% csrf_token %}
+  <table class="table table-bordered table-dark">
+    <tr>
+      <td width="64">Choose file</td>
+      <td width="313"><label for="fileField"></label>
+      <input type="file" name="fileField" id="fileField" /></td>
+    </tr>
+
+        <tr>
+      <td width="64">Choose finger file</td>
+      <td width="313"><label for="fileField"></label>
+      <input type="file" name="fing" id="fileField" /></td>
+    </tr>
+
+    <tr>
+      <td>&nbsp;</td>
+      <td><input type="submit" name="button3" id="button3" class="btn btn-primary" value="Upload" /></td>
+    </tr>
+  </table>
+</form>
+</body>
+{% endblock %}
